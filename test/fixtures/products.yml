@@ -1,0 +1,18 @@
+
+ps4:
+  title: PS4 Fat
+  description: PS4 en buen estado
+  price: 150
+  category: videogames
+
+switch:
+  title: Nintendo switch
+  description: Falla lector DVD
+  price: 195
+  category: videogames
+
+air:
+  title: MackBook Air
+  description: Le falla la bateria
+  price: 250
+  category: computers

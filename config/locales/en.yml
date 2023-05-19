@@ -1,0 +1,63 @@
+en:
+  activerecord:
+    models:
+      product: Product
+    attributes:
+      product:
+        title: 'Title'
+        description: 'Description'
+        price: 'Price'
+        photo: 'Photo'
+    errors:
+      models:
+        product:
+          attributes:
+            title:
+              blank: "can't be blank"
+            description:
+              blank: "can't be blank"
+            price:
+              blank: "can't be blank"
+  common:
+    confirm: 'Are you sure?'
+    back: 'Go back'
+  shared:
+    header:
+      add: 'Add product'
+  products:
+    edit:
+      title: 'Edit product'
+    new:
+      title: 'Add product'
+    index:
+      title: 'Products:'
+      all: 'All'
+      min_price: 'Min price'
+      max_price: 'Max price'
+      query_text: 'What do you want to search?'
+    show:
+      edit: 'Edit product'
+      delete: 'Delete product'
+    create:
+      created: 'Your product has been successfully created'
+    update:
+      updated: 'Your product has been successfully updated'
+    destroy:
+      destroyed: 'Your product has been successfully destroyed'
+  categories:
+    category:
+      edit: 'Edit'
+      delete: 'Delete'
+    index:
+      title: 'Categories'
+      new: 'Add category'
+    edit:
+      title: 'Edit category'
+    create:
+      created: 'Your category has been successfully created'
+    update:
+      updated: 'Your category has been successfully updated'
+    destroy:
+      destroyed: 'Your category has been successfully destroyed'
+    new:
+      title: 'New category'
