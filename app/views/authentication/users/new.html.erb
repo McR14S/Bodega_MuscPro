@@ -1,0 +1,27 @@
+<%= form_with(model: @users) do |form| %>
+
+    <% @users.errors.full_messages.each do |error| %>
+        <div>
+            <%= error %>
+        </div>
+    <% end %>
+
+    <div>
+        <%= form.label :email%>
+        <%= form.email_field :email %>
+    </div>
+
+    <div>
+        <%= form.label :email%>
+        <%= form.email_field :email %>
+    </div>
+
+    <div>
+        <%= form.label :password%>
+        <%= form.password_field :password %>
+    </div>
+
+    <div>
+        <%= form.submit %>
+    </div>
+<% end %>
