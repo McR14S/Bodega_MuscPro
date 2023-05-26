@@ -1,4 +1,6 @@
 es:
+  app_name: 'MusicPro'
+  meta_title: 'Bodega especializada en artículos de música'
   activerecord:
     models:
       product: Producto
@@ -35,6 +37,9 @@ es:
       min_price: 'Precio Minimo'
       max_price: 'Precio Maximo'
       query_text: '¿Que quieres buscar?'
+      expensive: 'Mas caros'
+      cheapest: 'Mas baratos'
+      newest: 'Añadidos recientemente'
     show:
       edit: 'Editar producto'
       delete: 'Borrar producto'

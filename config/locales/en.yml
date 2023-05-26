@@ -1,4 +1,6 @@
 en:
+  app_name: 'MusicPro'
+  meta_title: 'Warehouse specialized in music items'
   activerecord:
     models:
       product: Product
@@ -35,6 +37,9 @@ en:
       min_price: 'Min price'
       max_price: 'Max price'
       query_text: 'What do you want to search?'
+      expensive: 'Expensive first'
+      cheapest: 'Cheapest first'
+      newest: 'Newest first'
     show:
       edit: 'Edit product'
       delete: 'Delete product'

@@ -1,6 +1,6 @@
 <%= link_to products_path do %>
-    <h1> MusicPro </h1>
+    <h1> <%= t('app_name') %> </h1>
 <% end %>
 
 <%= link_to t('.add'), new_product_path %>
-<%= link_to t('.categories'), categories_path %>
+<%= link_to t('.categories'), categories_path %> 

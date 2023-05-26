@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.1.3"
+ruby "3.2.2"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4", ">= 7.0.4.3"
@@ -45,6 +45,10 @@ gem "bootsnap", require: false
 
 #postgresql fulltextsearch
 gem "pg_search", "~> 2.3"
+
+#Paginations
+gem "pagy", "~> 6.0"
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
@@ -73,5 +77,7 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+
 
 
