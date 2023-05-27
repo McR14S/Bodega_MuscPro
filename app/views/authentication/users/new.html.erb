@@ -1,6 +1,6 @@
-<%= form_with(model: @users) do |form| %>
+<%= form_with(model: @user) do |form| %>
 
-    <% @users.errors.full_messages.each do |error| %>
+    <% @user.errors.full_messages.each do |error| %>
         <div>
             <%= error %>
         </div>
@@ -12,8 +12,8 @@
     </div>
 
     <div>
-        <%= form.label :email%>
-        <%= form.email_field :email %>
+        <%= form.label :username%>
+        <%= form.text_field :username %>
     </div>
 
     <div>
