@@ -30,6 +30,10 @@ en:
     users:
       create:
         created: 'Your account has been created!'
+    users:
+      create:
+        created: 'Welcome!'
+        failed: 'Invalid Login credentials!'
   products:
     edit:
       title: 'Edit product'
