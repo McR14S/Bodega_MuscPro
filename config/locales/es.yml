@@ -23,6 +23,7 @@ es:
   common:
     confirm: '¿Estás seguro?'
     back: 'Volver'
+    not_logged_in: 'No estas Logeado en nuestra pagina'
   shared:
     header:
       add: 'Añadir producto'

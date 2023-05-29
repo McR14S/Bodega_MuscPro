@@ -23,6 +23,7 @@ en:
   common:
     confirm: 'Are you sure?'
     back: 'Go back'
+    not_logged_in: 'you are not logged'
   shared:
     header:
       add: 'Add product'
