@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
 
     def index
         @categories = Category.order(name: :asc).load_async
-        
+        #parametro filtrado de productos
         @pagy, @products = pagy_countless(FindProducts.new.call(product_params_index).load_async, items: 12)
             
         render 'index'
@@ -62,7 +62,7 @@ class ProductsController < ApplicationController
 
     #Limpiamos parametros no especificados
     def product_params_index
-        params.permit(:category_id, :min_price, :max_price, :query_text, :order_by)
+        params.permit(:category_id, :min_price, :max_price, :query_text, :order_by, :page)
     end
 
     def product
