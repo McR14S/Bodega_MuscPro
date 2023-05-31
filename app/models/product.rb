@@ -23,4 +23,6 @@ class Product < ApplicationRecord
 
     #modelo product pertenece a una categoria
     belongs_to :category
+    #le asigna el ID del usuario logeado
+    belongs_to :user, default: -> { Current.user }
 end
