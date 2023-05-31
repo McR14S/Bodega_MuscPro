@@ -31,12 +31,14 @@ class ProductsController < ApplicationController
     end
 
     #Editamos un producto buscandolo por el ID
+    #Tambien denegamos la accion a cualquier usuario que no comparta el ID asociado
     def edit
-        product
+        authorize! product
     end
 
     #Actualizamos el producto
     def update
+        authorize! product
         if product.update(product_params)
             redirect_to products_path, notice: t('.updated')
         else
@@ -46,6 +48,7 @@ class ProductsController < ApplicationController
     
     #Eliminacion de un producto con el ID
     def destroy
+        authorize! product
         product.destroy
          
         redirect_to products_path, notice: t('.destroyed'), status: :see_other
