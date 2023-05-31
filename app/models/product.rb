@@ -25,4 +25,9 @@ class Product < ApplicationRecord
     belongs_to :category
     #le asigna el ID del usuario logeado
     belongs_to :user, default: -> { Current.user }
+
+    #Refactorizar consulta de ID del usuario logeado
+    def owner?
+        user_id == Current.user.id
+    end
 end
