@@ -1,6 +1,7 @@
 class Product < ApplicationRecord
-
     include PgSearch::Model
+    include Favoritable
+
     pg_search_scope :search_full_text, against: {
         title: 'A',
         description: 'B'
@@ -21,6 +22,7 @@ class Product < ApplicationRecord
     validates :description, presence: true
     validates :price, presence: true
 
+
     #modelo product pertenece a una categoria
     belongs_to :category
     #le asigna el ID del usuario logeado
@@ -30,4 +32,7 @@ class Product < ApplicationRecord
     def owner?
         user_id == Current.user&.id
     end
+
+    #Refactorizar el favorito (se pone exclamacion por que realiza cambios)
+
 end
