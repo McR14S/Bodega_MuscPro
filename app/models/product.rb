@@ -28,6 +28,6 @@ class Product < ApplicationRecord
 
     #Refactorizar consulta de ID del usuario logeado
     def owner?
-        user_id == Current.user.id
+        user_id == Current.user&.id
     end
 end
