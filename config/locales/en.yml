@@ -25,7 +25,7 @@ en:
     not_authorized: 'You are not authorized for this action'
     not_found: 'Not found'
   shared:
-    header:
+    items:
       add: 'Add product'
       login: 'Login'
       register: 'Register'
