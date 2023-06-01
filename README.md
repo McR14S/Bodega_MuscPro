@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Requistos
 
-Things you may want to cover:
+# ruby 3.2.2 (2023-03-30 revision e51014f9c0) [x64-mingw-ucrt]
+# Rails 7.0.4.3
+# PostgreSQL 15.3
 
-* Ruby version
 
-* System dependencies
+Pasos:
 
-* Configuration
+# git clone https://github.com/McR14S/Bodega_MuscPro.git
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Iniciar servidor / en el caso de probar las css in live usar tambien la segunda sentencia de windows
+# linux = bin/dev
+# windows = rails server
+#         = rails tailwindcss:watch

@@ -30,6 +30,7 @@ es:
       login: 'Acceso'
       register: 'Registrar'
       logout: 'Desconectar'
+      categories: 'Categorias'
       favorites: 'Mis favoritos'
   authentication:
     users:
