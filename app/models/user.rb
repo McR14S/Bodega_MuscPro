@@ -12,7 +12,7 @@ class User < ApplicationRecord
             with: /\A[a-zA-Z0-9-]+\z/,
             message: :invalid
         }
-    validates :password_digest, length: {minimum:6} 
+    validates :password_digest, length: {minimum:6} , if: :password_digest_changed?
 
     has_many :products, dependent: :destroy
     has_many :favorites, dependent: :destroy
