@@ -12,6 +12,10 @@ class ProductsController < ApplicationController
     #Mostramos producto
     def show
         product
+        
+        #test api profe benja
+        email_service = EmailBemtorresService.new
+        @saludo = email_service.send_email_to_bemtorres
     end
 
     #Nuevo producto

@@ -1,3 +1,7 @@
+<p class=" bg-blue-500 text-white font-bold py-2 px-3 rounded mt-2">
+   <%= @saludo %>
+</p>
+
 <div id="<%= dom_id(product) %>">
   <%= image_tag product.photo, width: 200 if product.photo.attached? %>
 
@@ -6,4 +10,6 @@
   <p class='description'>Descripcion: <%= product.description %></p>
 
   <span class='price'>Precio: <%= product.price %>$</span>
+
+  
 </div>
