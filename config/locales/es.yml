@@ -92,3 +92,7 @@ es:
   favorites:
     index:
       title: 'Mis favoritos'
+  user_mailer:
+    welcome:
+      subject: 'Bienvenido a Musicpro!'
+      welcome_message: 'Hey %{username}, Bienvenido a MusicPro!'
