@@ -91,6 +91,8 @@ GEM
     debug (1.8.0)
       irb (>= 1.5.0)
       reline (>= 0.3.1)
+    dockerfile-rails (1.4.1)
+      rails
     erubi (1.12.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
@@ -136,7 +138,10 @@ GEM
     nio4r (2.5.9)
     nokogiri (1.15.1-x64-mingw-ucrt)
       racc (~> 1.4)
+    nokogiri (1.15.1-x86_64-linux)
+      racc (~> 1.4)
     pagy (6.0.4)
+    pg (1.5.3)
     pg (1.5.3-x64-mingw-ucrt)
     pg_search (2.3.6)
       activerecord (>= 5.2)
@@ -175,6 +180,8 @@ GEM
       thor (~> 1.0)
       zeitwerk (~> 2.5)
     rake (13.0.6)
+    redis (5.0.6)
+      redis-client (>= 0.9.0)
     redis-client (0.14.1)
       connection_pool
     regexp_parser (2.8.0)
@@ -186,11 +193,6 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
-    sidekiq (7.1.1)
-      concurrent-ruby (< 2)
-      connection_pool (>= 2.3.0)
-      rack (>= 2.2.4)
-      redis-client (>= 0.14.0)
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -201,6 +203,8 @@ GEM
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
     tailwindcss-rails (2.0.29-x64-mingw-ucrt)
+      railties (>= 6.0.0)
+    tailwindcss-rails (2.0.29-x86_64-linux)
       railties (>= 6.0.0)
     thor (1.2.2)
     timeout (0.3.2)
@@ -239,12 +243,14 @@ GEM
 
 PLATFORMS
   x64-mingw-ucrt
+  x86_64-linux
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap
   capybara
   debug
+  dockerfile-rails (>= 1.4)
   importmap-rails
   jbuilder
   letter_opener
@@ -253,8 +259,8 @@ DEPENDENCIES
   pg_search (~> 2.3)
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.3)
+  redis (~> 5.0)
   selenium-webdriver
-  sidekiq (~> 7.1)
   sprockets-rails
   stimulus-rails
   tailwindcss-rails (~> 2.0)

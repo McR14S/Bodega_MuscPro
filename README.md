@@ -26,3 +26,19 @@
 - bundle add tailwindcss-rails
 - rails db:reset
 - telete tmp/cache
+
+
+
+
+# Produccion!
+https://musicpro.fly.dev/
+
+- fly auth signup
+- fly launch
+
+-git clone ""
+-fly.git
+-cd hello
+-fly launch --now
+-fly deploy
+-fly open

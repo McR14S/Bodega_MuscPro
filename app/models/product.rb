@@ -33,6 +33,8 @@ class Product < ApplicationRecord
         user_id == Current.user&.id
     end
 
-    #Refactorizar el favorito (se pone exclamacion por que realiza cambios)
+   def broadcast 
+    broadcast_replace_to self, partial: 'products/product_details', locals: { product: self}
+   end
 
 end
