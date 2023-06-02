@@ -19,26 +19,26 @@
 # Iniciar servidor / en el caso de probar las css in live usar tambien la segunda sentencia de windows
 - linux = bin/dev
 - windows = rails server
-          = rails tailwindcss:watch
+-         = rails tailwindcss:watch
 
 
 # Soluciones:
 - bundle add tailwindcss-rails
 - rails db:reset
-- telete tmp/cache
+- delete tmp/cache
 
 
 
 
 # Produccion!
-https://musicpro.fly.dev/
+- https://musicpro.fly.dev/
 
 - fly auth signup
 - fly launch
 
--git clone ""
--fly.git
--cd hello
--fly launch --now
--fly deploy
--fly open
+- git clone ""
+- fly.git
+- cd hello
+- fly launch --now
+- fly deploy
+- fly open
