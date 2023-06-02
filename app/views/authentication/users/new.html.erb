@@ -1,27 +1,43 @@
-<%= form_with(model: @user) do |form| %>
+<section class="bg-gray-50 min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('assets/wallpaper.jpg');">
+  <!-- Registro container -->
+  <div class="bg-gray-100 flex flex-col sm:flex-row rounded-2xl shadow-lg max-w-3xl p-5">
+    <!-- Formulario -->
+    <div class="sm:w-1/2 px-8 sm:px-16">
+      <h2 class="font-bold text-2xl text-teal-500 mb-4">
+        Registro
+      </h2>
 
-    <% @user.errors.full_messages.each do |error| %>
-        <div>
+      <%= form_with(model: @user, class: "flex flex-col items-center") do |form| %>
+        <% @user.errors.full_messages.each do |error| %>
+          <div class="text-red-600 mb-2">
             <%= error %>
+          </div>
+        <% end %>
+
+        <div class="mb-4">
+          <%= form.label :email, class: "text-gray-700 font-bold" %>
+          <%= form.email_field :email, required: true, class: "w-full border border-gray-300 focus:border-teal-400 focus:ring focus:ring-teal-400 focus:ring-opacity-50 rounded-md p-2" %>
         </div>
-    <% end %>
 
-    <div>
-        <%= form.label :email%>
-        <%= form.email_field :email, required: true %>
+        <div class="mb-4">
+          <%= form.label :username, class: "text-gray-700 font-bold" %>
+          <%= form.text_field :username, required: true, class: "w-full border border-gray-300 focus:border-teal-400 focus:ring focus:ring-teal-400 focus:ring-opacity-50 rounded-md p-2" %>
+        </div>
+
+        <div class="mb-4">
+          <%= form.label :password, class: "text-gray-700 font-bold" %>
+          <%= form.password_field :password, required: true, class: "w-full border border-gray-300 focus:border-teal-400 focus:ring focus:ring-teal-400 focus:ring-opacity-50 rounded-md p-2" %>
+        </div>
+
+        <div>
+          <%= form.submit "Registrar", class: "bg-teal-400 hover:bg-teal-500 text-white font-bold py-2 px-4 rounded-md" %>
+        </div>
+      <% end %>
     </div>
 
-    <div>
-        <%= form.label :username%>
-        <%= form.text_field :username, required: true %>
+    <!-- Imagen -->
+    <div class="hidden sm:flex items-center justify-center w-1/2">
+      <img class="rounded-2xl" src="assets/login.jpg" alt="">
     </div>
-
-    <div>
-        <%= form.label :password%>
-        <%= form.password_field :password, required: true %>
-    </div>
-
-    <div>
-        <%= form.submit %>
-    </div>
-<% end %>
+  </div>
+</section>

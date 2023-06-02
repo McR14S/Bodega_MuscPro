@@ -1,8 +1,7 @@
-<div id=" <%= dom_id category %> "> 
-    <%= category.name %>
-    <%= link_to t('.edit'), edit_category_path(category) %>
-    <%= link_to t('.delete'), category_path(category), data:{
-        turbo_method: :delete,
-        turbo_confirm: t('common.confirm')
-    } %>
+<div id="<%= dom_id(category) %>" class="my-4 p-4 bg-gray-100 rounded-md">
+  <%= category.name %>
+  <%= link_to t('.edit'), edit_category_path(category), class: "ml-2 text-blue-500" %>
+  <%= link_to t('.delete'), category_path(category),
+              data: { turbo_method: :delete, turbo_confirm: t('common.confirm') },
+              class: "ml-2 text-red-500" %>
 </div>

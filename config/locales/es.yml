@@ -27,7 +27,7 @@ es:
   shared:
     items:
       add: 'Añadir producto'
-      login: 'Acceso'
+      login: 'Iniciar'
       register: 'Registrar'
       logout: 'Desconectar'
       categories: 'Categorias'

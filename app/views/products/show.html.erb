@@ -1,16 +1,19 @@
-<%= render partial: 'products/product_details', locals: { product: @product } %>
+<div class="flex justify-center items-center h-screen">
+  <div class="max-w-md p-6 bg-white rounded-md shadow-md">
+    <%= render partial: 'products/product_details', locals: { product: @product } %>
 
-<%= link_to t('.edit'), edit_product_path(@product) if @product.owner? %>
+    <% if @product.owner? %>
+      <%= link_to t('.edit'), edit_product_path(@product), class: "text-blue-500 underline" %>
+      <%= link_to t('.delete'), product_path(@product), data: {
+        turbo_method: :delete,
+        turbo_confirm: t('common.confirm')
+      }, class: "text-red-500 underline" %>
+    <% end %>
 
-<%= link_to t('.delete'), product_path(@product), data: {
-  turbo_method: :delete,
-  turbo_confirm: t('common.confirm')
-} if @product.owner? %>
+    <%= link_to t('.view_more_products', username: @product.user.username), user_path(@product.user.username), class: "text-blue-500 underline" %>
 
-<%= link_to t('.view_more_products', username: @product.user.username), user_path(@product.user.username) %>
+    <%= render partial: 'favorite', locals: { product: @product } %>
 
-<%= render partial: 'favorite', locals: { product: @product } %>
-
-<%= turbo_stream_from @product %>
-
-
+    <%= turbo_stream_from @product %>
+  </div>
+</div>
