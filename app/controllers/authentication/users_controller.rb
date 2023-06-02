@@ -7,6 +7,9 @@ class Authentication::UsersController < ApplicationController
 
     def create
         @user = User.new(user_params)
+        #Guardamos el countryCode del API
+        @user.country = FetchCountryService.new(request.remote_ip).perform
+        #Fin del Call
 
         if @user.save
             UserMailer.with(user: @user).welcome.deliver_later
