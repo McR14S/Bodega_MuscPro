@@ -1,15 +1,17 @@
-<p class="bg-blue-500 text-white font-bold py-2 px-3 rounded mt-2">
-   <%= @saludo %>
-</p>
-
 <div id="<%= dom_id(product) %>">
   <%= image_tag product.photo, width: 200 if product.photo.attached? %>
 
-  <h1 class='title'>Nombre: <%= product.title %></h1>
+  <p class="bg-blue-500 text-white font-bold py-2 px-3 rounded mt-2">
+   <%= @saludo %>
+  </p>
 
-  <p class='description'>Descripcion: <%= product.description %></p>
+  <h1 class="title"><%= product.title %></h1>
 
- <span class='price'>Precio: $<%= number_with_delimiter(product.price, delimiter: '.', separator: ',') %></span>
+  <p class="description"><%= product.description %></p>
 
-  <span class='stock'>Stock: <%= product.stock %></span> 
+  <span class="price">Precio: $<%= number_with_delimiter(product.price, delimiter: '.', separator: ',') %></span>
+
+  <span class="stock">Stock: <%= product.stock %></span> 
+
+  <button data-controller="send-request" data-action="click->send-request#enviarSolicitud" class="bg-blue-500 text-white font-bold py-2 px-3 rounded mt-2">Enviar solicitud de transporte</button>
 </div>

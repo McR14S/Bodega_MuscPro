@@ -68,6 +68,11 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.4)
       public_suffix (>= 2.0.2, < 6.0)
+    appmap (0.99.4)
+      activesupport
+      method_source
+      rack
+      reverse_markdown
     bcrypt (3.1.18)
     bindex (0.8.1)
     bootsnap (1.16.0)
@@ -187,6 +192,8 @@ GEM
     regexp_parser (2.8.0)
     reline (0.3.4)
       io-console (~> 0.5)
+    reverse_markdown (2.1.1)
+      nokogiri
     rexml (3.2.5)
     rubyzip (2.3.2)
     selenium-webdriver (4.9.1)
@@ -202,6 +209,7 @@ GEM
       sprockets (>= 3.0.0)
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
+    swagger-ui_rails (0.1.7)
     tailwindcss-rails (2.0.29-x64-mingw-ucrt)
       railties (>= 6.0.0)
     tailwindcss-rails (2.0.29-x86_64-linux)
@@ -246,6 +254,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  appmap
   bcrypt (~> 3.1.7)
   bootsnap
   capybara
@@ -263,6 +272,7 @@ DEPENDENCIES
   selenium-webdriver
   sprockets-rails
   stimulus-rails
+  swagger-ui_rails (~> 0.1.7)
   tailwindcss-rails (~> 2.0)
   turbo-rails
   tzinfo-data

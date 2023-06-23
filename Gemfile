@@ -49,6 +49,13 @@ gem "pg_search", "~> 2.3"
 #Paginations
 gem "pagy", "~> 6.0"
 
+#documentacion
+gem 'swagger-ui_rails', '~> 0.1.7'
+
+# This should be the first gem listed, so that appmap is loaded first
+gem 'appmap', group: %i[test development]
+
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 

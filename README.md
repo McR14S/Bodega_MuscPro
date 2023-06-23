@@ -43,3 +43,43 @@
 - fly deploy
 - fly open
 
+
+# Comandos API!
+URL base de la API: https://musicpro.fly.dev/
+
+Endpoint para ver los productos:
+
+Ruta: /
+Método: GET
+Parámetros de consulta opcionales:
+category_id: ID de la categoría para filtrar los productos por categoría.
+max_price: Precio máximo para filtrar los productos por rango de precio máximo.
+min_price: Precio mínimo para filtrar los productos por rango de precio mínimo.
+order_by: Ordenar los productos por precio (valores posibles: expensive para precios más altos primero, cheapest para precios más bajos primero).
+query_text: Texto de búsqueda para buscar productos por título o descripción.
+Para utilizar la API, los usuarios pueden hacer solicitudes HTTP GET a la URL base https://musicpro.fly.dev/ con los parámetros de consulta opcionales según sus necesidades. Aquí tienes un ejemplo de cómo se vería la URL completa para diferentes casos:
+
+Obtener todos los productos:
+
+URL: https://musicpro.fly.dev/
+Método: GET
+Filtrar productos por categoría:
+
+URL: https://musicpro.fly.dev/?category_id=<ID_CATEGORÍA>
+Método: GET
+(Reemplaza <ID_CATEGORÍA> con el ID numérico de la categoría deseada)
+Filtrar productos por rango de precio:
+
+URL: https://musicpro.fly.dev/?min_price=<PRECIO_MÍNIMO>&max_price=<PRECIO_MÁXIMO>
+Método: GET
+(Reemplaza <PRECIO_MÍNIMO> y <PRECIO_MÁXIMO> con los valores numéricos correspondientes)
+Ordenar productos por precio:
+
+URL: https://musicpro.fly.dev/?order_by=<ORDEN>
+Método: GET
+(Reemplaza <ORDEN> con expensive para ordenar por precios más altos primero o cheapest para ordenar por precios más bajos primero)
+Buscar productos por texto:
+
+URL: https://musicpro.fly.dev/?query_text=<TEXTO>
+Método: GET
+(Reemplaza <TEXTO> con el texto de búsqueda deseado)
