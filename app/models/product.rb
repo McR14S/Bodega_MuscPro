@@ -21,7 +21,7 @@ class Product < ApplicationRecord
     validates :title, presence: true
     validates :description, presence: true
     validates :price, presence: true
-
+    validates :stock, presence: true, numericality: { greater_than_or_equal_to: 0 }
 
     #modelo product pertenece a una categoria
     belongs_to :category

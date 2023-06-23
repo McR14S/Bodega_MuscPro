@@ -1,4 +1,4 @@
-<p class=" bg-blue-500 text-white font-bold py-2 px-3 rounded mt-2">
+<p class="bg-blue-500 text-white font-bold py-2 px-3 rounded mt-2">
    <%= @saludo %>
 </p>
 
@@ -9,7 +9,7 @@
 
   <p class='description'>Descripcion: <%= product.description %></p>
 
-  <span class='price'>Precio: <%= product.price %>$</span>
+ <span class='price'>Precio: $<%= number_with_delimiter(product.price, delimiter: '.', separator: ',') %></span>
 
-  
+  <span class='stock'>Stock: <%= product.stock %></span> 
 </div>
